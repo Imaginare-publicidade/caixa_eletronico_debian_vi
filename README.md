@@ -1,15 +1,31 @@
-# Caixa Eletronico em Portugol
+# Caixa Eletronico
 
-Sistema simples de caixa eletronico feito em Portugol, criado no Debian usando o editor vi.
+Sistema simples de caixa eletronico criado no Debian usando o editor vi.
 
-## Como abrir
+## Arquivo executavel no Debian
 
-Abra o arquivo caixa_eletronico.por no Portugol Studio.
+O arquivo principal para compilar e executar no Debian e:
 
-## Conteudos usados
+caixa_eletronico.c
 
-- Variaveis
-- Leia e escreva
-- Enquanto
-- Escolha/caso
-- Se/senao
+## Como compilar
+
+gcc caixa_eletronico.c -o caixa_eletronico
+
+## Como executar
+
+./caixa_eletronico
+
+## Funcionalidades
+
+- Verificar saldo
+- Depositar valor
+- Sacar valor
+- Pedir emprestimo
+- Pagar emprestimo
+- Consultar emprestimo
+- Sair
+
+## Observacao
+
+O arquivo caixa_eletronico.por tambem foi mantido como uma versao em Portugol.
