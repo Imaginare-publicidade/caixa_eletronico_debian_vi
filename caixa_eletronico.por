@@ -66,6 +66,61 @@ programa
                     }
                     pare
 
+                caso 4:
+                    escreva("Digite o valor do emprestimo: R$")
+                    leia(valor)
+
+                    se (valor > 0)
+                    {
+                        saldo = saldo + valor
+                        emprestimo = emprestimo + valor
+                        escreva("Emprestimo aprovado.\n")
+                        escreva("Saldo atual: R$", saldo, "\n")
+                        escreva("Emprestimo em aberto: R$", emprestimo, "\n")
+                    }
+                    senao
+                    {
+                        escreva("Valor invalido.\n")
+                    }
+                    pare
+
+                caso 5:
+                    se (emprestimo <= 0)
+                    {
+                        escreva("Nao existe emprestimo em aberto.\n")
+                    }
+                    senao
+                    {
+                        escreva("Digite o valor para pagar: R$")
+                        leia(valor)
+
+                        se (valor <= 0)
+                        {
+                            escreva("Valor invalido.\n")
+                        }
+                        senao se (valor > saldo)
+                        {
+                            escreva("Saldo insuficiente.\n")
+                        }
+                        senao se (valor > emprestimo)
+                        {
+                            escreva("Valor maior que o emprestimo em aberto.\n")
+                        }
+                        senao
+                        {
+                            saldo = saldo - valor
+                            emprestimo = emprestimo - valor
+                            escreva("Pagamento realizado.\n")
+                            escreva("Saldo atual: R$", saldo, "\n")
+                            escreva("Emprestimo em aberto: R$", emprestimo, "\n")
+                        }
+                    }
+                    pare
+
+                caso 6:
+                    escreva("Emprestimo em aberto: R$", emprestimo, "\n")
+                    pare
+
                 caso 0:
                     escreva("Encerrando o sistema.\n")
                     pare
