@@ -30,6 +30,42 @@ programa
                     escreva("Saldo atual: R$", saldo, "\n")
                     pare
 
+                caso 2:
+                    escreva("Digite o valor do deposito: R$")
+                    leia(valor)
+
+                    se (valor > 0)
+                    {
+                        saldo = saldo + valor
+                        escreva("Deposito realizado.\n")
+                        escreva("Saldo atual: R$", saldo, "\n")
+                    }
+                    senao
+                    {
+                        escreva("Valor invalido.\n")
+                    }
+                    pare
+
+                caso 3:
+                    escreva("Digite o valor do saque: R$")
+                    leia(valor)
+
+                    se (valor <= 0)
+                    {
+                        escreva("Valor invalido.\n")
+                    }
+                    senao se (valor > saldo)
+                    {
+                        escreva("Saldo insuficiente.\n")
+                    }
+                    senao
+                    {
+                        saldo = saldo - valor
+                        escreva("Saque realizado.\n")
+                        escreva("Saldo atual: R$", saldo, "\n")
+                    }
+                    pare
+
                 caso 0:
                     escreva("Encerrando o sistema.\n")
                     pare
